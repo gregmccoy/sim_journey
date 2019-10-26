@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <br>
+    <a href="/" style="color: red; font-size: 16px;">< Home</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <br>
+    <h1 style="text-align: center; color: red;">How are you doing?</h1>
+    <br>
+    <br>
+    <div id="wellness" style="margin: 2px; text-align: center;">
+    {% for word in words %}
+      <a href="#"><div class="word" style="font-size: 16px; display: inline-block; margin: 3px; padding: 6px; color: white; background-color: #79afa3">{{ word|title}}</div></a>
+    {% endfor %}
+    </div>
+    <div id="wellness-thanks" style="margin: 2px; text-align: center;">
+      <h1>Thank You!</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}

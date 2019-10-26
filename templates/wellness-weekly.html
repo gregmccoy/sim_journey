@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <br>
+    <a href="/" style="color: red; font-size: 16px;">< Home</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <br>
+    <h1 style="text-align: center; color: red;">How can we pray for you?</h1>
+    <br>
+    <br>
+     <form action="/wellness-weekly">
+      <div class="form-group">
+       <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

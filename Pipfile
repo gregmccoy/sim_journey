@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+name = "pypi"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+xmltodict = "==0.11.0"
+Flask = "==0.12.2"
+sqlalchemy-migrate = "*"
+
+[requires]
+python_version = "3.4"

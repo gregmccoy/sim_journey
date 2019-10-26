@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://grmc.io/static/flask/libs/bootstrap/css/bootstrap.min.css"/>
+    <script src="https://grmc.io/static/flask/libs/bootstrap/js/jquery.min.js"></script>
+    <script src="https://grmc.io/static/flask/libs/bootstrap/js/bootstrap.js"></script>
+    {% block pagecss %}
+    {% endblock %}
+    <script>
+      $( document ).ready(function() {
+        var count = 0;
+        $("#wellness-thanks").hide();
+        $('.word').on("click", function(){
+          $(this).css("background-color", "#437066");
+          count += 1;
+          if (count == 3) {
+            $("#wellness").fadeOut().delay(200);
+            $("#wellness-thanks").delay(300).fadeIn();
+          };
+        });
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="btn-group" style="height: 100px; position: fixed; bottom: -25px; width: 103%; padding-bottom: 25px;">
+      <a href="/" class="col-xs-3" style="background-color: #404040; padding-top: 5px; padding-bottom: 5px;">
+        <img style="width: 80%" src="https://grmc.io/static/flask/imgs/journey-icon-01.png">
+      </a>
+      <a href="/wellness-choice" class="col-xs-3" style="background-color: #404040; padding-top: 5px; padding-bottom: 5px;">
+        <img style="width: 80%" src="https://grmc.io/static/flask/imgs/wellness-check-icon-01.png">
+      </a>
+      <a href="/journal" class="col-xs-3" style="background-color: #404040; padding-top: 5px; padding-bottom: 5px;">
+        <img style="width: 80%" src="https://grmc.io/static/flask/imgs/journaling-icon-menu-01.png">
+      </a>
+      <a href="#" class="col-xs-3" style="background-color: #404040; padding-top: 5px; padding-bottom: 5px;">
+        <img style="width: 80%" src="https://grmc.io/static/flask/imgs/mentor-icon-menu-01.png">
+      </a>
+    </div>
+  </body>
+</html>

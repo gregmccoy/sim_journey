@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block pagecss %}
+  <style>
+    .journal_nav {
+      color: white;
+      background-color: #eb0828;
+      text-decoration: none;
+      padding-top: 5px;
+      font-size: 18px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+</div>
+  <div class="btn-group" style="position: fixed; bottom: 55%; width: 103%">
+    <a href="/" class="col-xs-3 journal_nav" >
+      Entires
+    </a>
+    <a href="/wellness-choice" class="col-xs-3 journal_nav" >
+      Photos
+    </a>
+    <a href="#" class="col-xs-3 journal_nav" >
+      Photos
+    </a>
+    <a href="#" class="col-xs-3 journal_nav" >
+      Today
+    </a>
+  </div>
+  <div style="background-color: #eb0828; height: 45%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3 col-xs-offset-3" style="margin-top: 23%">
+          <img width="100%" src="https://grmc.io/static/flask/imgs/camera-01.png">
+        </div>
+        <div class="col-xs-3 col-xs-offset-1" style="margin-top: 23%">
+          <img width="100%" src="https://grmc.io/static/flask/imgs/plus-01.png">
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div style="background-color: #gray;">
+    <h4>October 26th, 2019</h4>
+    <hr>
+    {% for item in entries %}
+      <p>{{ item.text }}</p>
+      <p class="pull-right" style="margin-top: -40px;">{{ item.date }}</p>
+      <hr>
+    {% endfor %}
+  </div>
+{% endblock %}
